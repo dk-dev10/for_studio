@@ -198,6 +198,11 @@ input::-webkit-inner-spin-button {
   color: var(--sec-color);
   cursor: pointer;
 }
+.header__menu li a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+}
 
 .header__contacts {
   display: flex;
