@@ -13,10 +13,10 @@
         <img src="./assets/close.svg" alt="close" />
       </button>
       <ul class="nav__menu">
-        <li>Главная</li>
+        <li><a href="/for_studio/">Главная</a></li>
         <li><a href="/for_studio/price.html">Цены</a></li>
-        <li>Кейсы и отзывы</li>
-        <li>Контакты</li>
+        <li><a href="/for_studio/projects.html">Кейсы и отзывы</a></li>
+        <li><a href="/for_studio/contacts.html">Контакты</a></li>
         <li><a href="mailto:info@milkaweb.ru">info@milkaweb.ru</a></li>
         <li>
           +7 (495) 792-66-69 <br />
@@ -29,16 +29,14 @@
         <button class="nav__btn--toggle">
           <hr />
         </button>
-        <div class="header__logo">
+        <a href="/for_studio/" class="header__logo">
           <img src="./assets/logo.svg" alt="logo" />
-        </div>
+        </a>
         <ul class="header__menu">
-          <li>Home</li>
-          <li>
-            <a href="/for_studio/price.html">Цены</a>
-          </li>
-          <li>Works</li>
-          <li>Contacts</li>
+          <li><a href="/for_studio/">Главная</a></li>
+          <li><a href="/for_studio/price.html">Цены</a></li>
+          <li><a href="/for_studio/projects.html">Кейсы и отзывы</a></li>
+          <li><a href="/for_studio/contacts.html">Контакты</a></li>
         </ul>
         <div class="header__contacts">
           <div class="header__contacts__wrapper">
@@ -625,5 +623,42 @@
         </div>
       
      -->
+
+    <script>
+      const stagesWrapper = document.querySelector('.stages');
+
+      function trackElement() {
+        const stagesWrapper = document.querySelector('.stages');
+        const stagesList = document.querySelectorAll('.stages__item');
+        const stagesPreview = document.querySelectorAll(
+          '.stages__preview__item'
+        );
+
+        const stagesWrapperPosition = stagesWrapper.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        stagesList[0].classList.add('stages__item--active');
+        if (stagesWrapperPosition < windowHeight) {
+          for (let i = 0; i < stagesPreview.length; i++) {
+            let coord = stagesPreview[i].getBoundingClientRect();
+
+            if (
+              coord.top < 0 &&
+              coord.top + coord.height > 0 &&
+              coord.bottom + coord.height > coord.height
+            ) {
+              stagesList[i].classList.add('stages__item--active');
+            } else {
+              stagesList[i].classList.remove('stages__item--active');
+            }
+          }
+        } else {
+        }
+      }
+
+      window.addEventListener('scroll', trackElement);
+
+      trackElement();
+    </script>
   </body>
 </html>
