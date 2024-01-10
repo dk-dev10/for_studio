@@ -935,9 +935,15 @@ a {
 
   .certificates__items {
     margin-top: 45px;
+    margin-right: 0;
+    width: 100%;
+    padding: 1%;
+    gap: 2%;
+
+    justify-content: center;
   }
   .certificate__item {
-    width: 429px;
+    width: 100%;
   }
   .certificate__item img {
     width: 100%;
@@ -1381,6 +1387,10 @@ a {
   .certificates__items {
     margin-right: 0;
     width: 100%;
+
+    flex-wrap: wrap;
+    gap: 34px;
+    padding: 0 5%;
   }
   .write__us {
     gap: 20px;
