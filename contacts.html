@@ -10,14 +10,11 @@
   <body>
     <nav class="nav__wrapper">
       <!-- nav__wrapper--open  -->
-      <button class="nav__btn">
-        <img src="./assets/close.svg" alt="close" />
-      </button>
       <ul class="nav__menu">
-        <li>Главная</li>
-        <li>Цены</li>
-        <li>Кейсы и отзывы</li>
-        <li>Контакты</li>
+        <li><a href="/for_studio/">Главная</a></li>
+        <li><a href="/for_studio/price.html">Цены</a></li>
+        <li><a href="/for_studio/projects.html">Кейсы и отзывы</a></li>
+        <li><a href="/for_studio/contacts.html">Контакты</a></li>
         <li><a href="mailto:info@milkaweb.ru">info@milkaweb.ru</a></li>
         <li>
           +7 (495) 792-66-69 <br />
@@ -25,19 +22,21 @@
         </li>
       </ul>
     </nav>
+
+    <!-- HEADER START -->
     <header class="header">
       <div class="container header__wrapper">
         <button class="nav__btn--toggle">
           <hr />
         </button>
-        <div class="header__logo">
+        <a href="/for_studio/" class="header__logo">
           <img src="./assets/logo.svg" alt="logo" />
-        </div>
+        </a>
         <ul class="header__menu">
-          <li>Home</li>
-          <li>Price</li>
-          <li>Works</li>
-          <li>Contacts</li>
+          <li><a href="/for_studio/">Главная</a></li>
+          <li><a href="/for_studio/price.html">Цены</a></li>
+          <li><a href="/for_studio/projects.html">Кейсы и отзывы</a></li>
+          <li><a href="/for_studio/contacts.html">Контакты</a></li>
         </ul>
         <div class="header__contacts">
           <div class="header__contacts__wrapper">
@@ -58,8 +57,7 @@
       </div>
     </header>
 
-    
-
+    <!-- HEADER END -->
 
     <footer class="footer">
       <div class="container">
@@ -103,5 +101,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

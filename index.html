@@ -9,9 +9,6 @@
   <body>
     <nav class="nav__wrapper">
       <!-- nav__wrapper--open  -->
-      <button class="nav__btn">
-        <img src="./assets/close.svg" alt="close" />
-      </button>
       <ul class="nav__menu">
         <li><a href="/for_studio/">Главная</a></li>
         <li><a href="/for_studio/price.html">Цены</a></li>
@@ -24,6 +21,8 @@
         </li>
       </ul>
     </nav>
+
+    <!-- HEADER START -->
     <header class="header">
       <div class="container header__wrapper">
         <button class="nav__btn--toggle">
@@ -57,6 +56,10 @@
       </div>
     </header>
 
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+
     <main class="main section__wrapper">
       <div class="container main__wrapper">
         <h1 class="section__title">
@@ -84,6 +87,10 @@
         </div>
       </div>
     </main>
+
+    <!-- MAIN END -->
+
+    <!-- WE CREATE START -->
 
     <section class="we__careate container section__wrapper">
       <h1 class="section__title">
@@ -148,8 +155,14 @@
           </p>
         </li>
       </ul>
-      <button class="def__btn def__btn--center">Узнать стоимость</button>
+      <button class="def__btn def__btn--center we__create__btn">
+        Узнать стоимость
+      </button>
     </section>
+
+    <!-- WE CREATE END -->
+
+    <!-- GETTING START -->
 
     <section class="section__wrapper container getting">
       <h1 class="section__title">
@@ -229,8 +242,14 @@
         </div>
       </div>
 
-      <button class="def__btn def__btn--center">Узнать стоимость</button>
+      <button class="def__btn def__btn--center getting__btn">
+        Узнать стоимость
+      </button>
     </section>
+
+    <!-- GETTING END -->
+
+    <!-- CERTIFICATES START -->
 
     <section class="container certificates__section">
       <div class="certificates__wrapper">
@@ -255,6 +274,10 @@
         </div>
       </div>
     </section>
+
+    <!-- CERTIFICATES START -->
+
+    <!-- EXPLORE START -->
 
     <section class="section__wrapper container">
       <h1 class="section__title">
@@ -288,6 +311,10 @@
         <img src="./assets/explore.png" alt="" />
       </div>
     </section>
+
+    <!-- EXPLORE END -->
+
+    <!-- STAGES START -->
 
     <section class="stages container section__wrapper">
       <h1 class="section__title">Этапы</h1>
@@ -443,9 +470,13 @@
       </div>
     </section>
 
+    <!-- STAGES END -->
+
     <div class="milkaweb__img">
       <img src="./assets/milkaweb__bg.png" alt="" />
     </div>
+
+    <!-- CALLUS START -->
 
     <div class="callus container section__wrapper">
       <div class="callus__wrapper">
@@ -485,8 +516,8 @@
           />
           <input
             class="callus__form__input"
-            type="number"
-            name="number"
+            type="text"
+            name="phone"
             id="number"
             placeholder="+ 7 (999) 999 99 99"
           />
@@ -509,6 +540,10 @@
         <img src="./assets/3d-5.png" alt="" class="td__hand" />
       </div>
     </div>
+
+    <!-- CALLUS END -->
+
+    <!-- FOOTER START -->
 
     <footer class="footer">
       <div class="container">
@@ -552,31 +587,17 @@
         </div>
       </div>
     </footer>
-    <!-- 
+
+    <!-- FOOTER END -->
+
+    <!-- POPUP  -->
+
     <div class="popup">
       <div class="popup__wrapper popup__wrapper--center">
-        <div class="popup__success">
-          <h2 class="popup__form__title">
-            Спасибо за заявку!
-            <br />
-            Мы с вами свяжемся.
-          </h2>
-
-          <sub>Ваш бонус:</sub>
-          <div class="popup__form__bonus">
-            <div class="bonus__lock">
-              <img src="./assets/galka.svg" alt="" />
-            </div>
-            <img src="./assets/book.png" alt="" />
-          </div>
-          <sup>Смотреть PDF</sup>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- POPUP FORM
-
-        <div class="popup__form">
+        <button class="popup__btn">
+          <img src="./assets/close.svg" alt="close" />
+        </button>
+        <form class="popup__form">
           <h2 class="popup__form__title">Заявка на консультацию</h2>
           <div class="popup__form__input">
             <label for="popup__name">Ваше имя</label>
@@ -609,56 +630,55 @@
             </div>
             <img src="./assets/book.png" alt="" />
           </div>
-        </div>
+        </form>
 
-      
-     -->
-
-    <!-- LOADING BLOCK
+        <!-- LOADING BLOCK -->
 
         <div class="loading__wrapper">
           <div class="loading__line"></div>
           <div class="loading__line"></div>
           <div class="loading__line"></div>
         </div>
-      
-     -->
 
+        <div class="popup__success">
+          <h2 class="popup__form__title">
+            Спасибо за заявку!
+            <br />
+            Мы с вами свяжемся.
+          </h2>
+
+          <sub>Ваш бонус:</sub>
+          <div class="popup__form__bonus">
+            <div class="bonus__lock">
+              <img src="./assets/galka.svg" alt="" />
+            </div>
+            <img src="./assets/book.png" alt="" />
+          </div>
+          <sup>Смотреть PDF</sup>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/main.js"></script>
     <script>
-      const stagesWrapper = document.querySelector('.stages');
-
-      function trackElement() {
-        const stagesWrapper = document.querySelector('.stages');
-        const stagesList = document.querySelectorAll('.stages__item');
-        const stagesPreview = document.querySelectorAll(
-          '.stages__preview__item'
-        );
-
-        const stagesWrapperPosition = stagesWrapper.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        stagesList[0].classList.add('stages__item--active');
-        if (stagesWrapperPosition < windowHeight) {
-          for (let i = 0; i < stagesPreview.length; i++) {
-            let coord = stagesPreview[i].getBoundingClientRect();
-
-            if (
-              coord.top < 0 &&
-              coord.top + coord.height > 0 &&
-              coord.bottom + coord.height > coord.height
-            ) {
-              stagesList[i].classList.add('stages__item--active');
-            } else {
-              stagesList[i].classList.remove('stages__item--active');
-            }
-          }
-        } else {
-        }
-      }
-
       window.addEventListener('scroll', trackElement);
-
       trackElement();
+      const btns = [
+        'header__contacts__btn',
+        'main__btn',
+        'we__create__btn',
+        'footer__btn',
+        'getting__btn',
+      ];
+      btns.forEach((btn) => openPopup(btn));
+
+      const inputElement = document.querySelector('#number');
+      const maskOptions = {
+        mask: '+{7}(000)000-00-00',
+      };
+      IMask(inputElement, maskOptions);
     </script>
   </body>
 </html>

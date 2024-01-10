@@ -10,14 +10,11 @@
   <body>
     <nav class="nav__wrapper">
       <!-- nav__wrapper--open  -->
-      <button class="nav__btn">
-        <img src="./assets/close.svg" alt="close" />
-      </button>
       <ul class="nav__menu">
-        <li>Главная</li>
-        <li>Цены</li>
-        <li>Кейсы и отзывы</li>
-        <li>Контакты</li>
+        <li><a href="/for_studio/">Главная</a></li>
+        <li><a href="/for_studio/price.html">Цены</a></li>
+        <li><a href="/for_studio/projects.html">Кейсы и отзывы</a></li>
+        <li><a href="/for_studio/contacts.html">Контакты</a></li>
         <li><a href="mailto:info@milkaweb.ru">info@milkaweb.ru</a></li>
         <li>
           +7 (495) 792-66-69 <br />
@@ -25,19 +22,21 @@
         </li>
       </ul>
     </nav>
+
+    <!-- HEADER START -->
     <header class="header">
       <div class="container header__wrapper">
         <button class="nav__btn--toggle">
           <hr />
         </button>
-        <div class="header__logo">
+        <a href="/for_studio/" class="header__logo">
           <img src="./assets/logo.svg" alt="logo" />
-        </div>
+        </a>
         <ul class="header__menu">
-          <li>Home</li>
-          <li>Price</li>
-          <li>Works</li>
-          <li>Contacts</li>
+          <li><a href="/for_studio/">Главная</a></li>
+          <li><a href="/for_studio/price.html">Цены</a></li>
+          <li><a href="/for_studio/projects.html">Кейсы и отзывы</a></li>
+          <li><a href="/for_studio/contacts.html">Контакты</a></li>
         </ul>
         <div class="header__contacts">
           <div class="header__contacts__wrapper">
@@ -57,6 +56,8 @@
         </div>
       </div>
     </header>
+
+    <!-- HEADER END -->
 
     <section class="section__wrapper container">
       <div class="price__wrapper">
@@ -193,5 +194,76 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup">
+      <div class="popup__wrapper popup__wrapper--center">
+        <button class="popup__btn">
+          <img src="./assets/close.svg" alt="close" />
+        </button>
+        <form class="popup__form">
+          <h2 class="popup__form__title">Заявка на консультацию</h2>
+          <div class="popup__form__input">
+            <label for="popup__name">Ваше имя</label>
+            <input
+              type="text"
+              placeholder="Введите ваше имя"
+              id="popup__name"
+              class="callus__form__input"
+            />
+          </div>
+          <div class="popup__form__input">
+            <label for="popup__name">Номер телефона</label>
+            <input
+              type="text"
+              placeholder="+ 7 (999) 999 99 99"
+              id="popup__name"
+              class="callus__form__input"
+            />
+          </div>
+          <button class="def__btn">Отправить</button>
+          <sup>
+            Нажимая на кнопку «Отправить заявку», я даю согласие на обработку
+            <br />
+            персональных данных и соглашаюсь c политикой конфиденциальности
+          </sup>
+
+          <div class="popup__form__bonus">
+            <div class="bonus__lock">
+              <img src="./assets/lock.svg" alt="" />
+            </div>
+            <img src="./assets/book.png" alt="" />
+          </div>
+        </form>
+
+        <!-- LOADING BLOCK -->
+
+        <div class="loading__wrapper">
+          <div class="loading__line"></div>
+          <div class="loading__line"></div>
+          <div class="loading__line"></div>
+        </div>
+
+        <div class="popup__success">
+          <h2 class="popup__form__title">
+            Спасибо за заявку!
+            <br />
+            Мы с вами свяжемся.
+          </h2>
+
+          <sub>Ваш бонус:</sub>
+          <div class="popup__form__bonus">
+            <div class="bonus__lock">
+              <img src="./assets/galka.svg" alt="" />
+            </div>
+            <img src="./assets/book.png" alt="" />
+          </div>
+          <sup>Смотреть PDF</sup>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/price.js"></script>
   </body>
 </html>
