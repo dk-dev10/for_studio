@@ -18,24 +18,22 @@ function trackElement() {
   const stagesPreview = document.querySelectorAll('.stages__preview__item');
 
   const stagesWrapperPosition = stagesWrapper?.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
 
-  stagesList[0].classList.add('stages__item--active');
-  if (stagesWrapperPosition < windowHeight) {
+  if (stagesWrapperPosition < 0) {
     for (let i = 0; i < stagesPreview.length; i++) {
       let coord = stagesPreview[i].getBoundingClientRect();
 
       if (
-        coord.top < 0 &&
+        coord.top - 55 < 0 &&
         coord.top + coord.height > 0 &&
         coord.bottom + coord.height > coord.height
       ) {
+        stagesList[i - 1]?.classList.remove('stages__item--active');
         stagesList[i].classList.add('stages__item--active');
-      } else {
-        stagesList[i].classList.remove('stages__item--active');
+        stagesList[i + 1]?.classList.remove('stages__item--active');
       }
     }
   } else {
+    stagesList[0].classList.add('stages__item--active');
   }
 }
-
