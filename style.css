@@ -1720,7 +1720,17 @@ a {
   .project__list {
     height: 250px;
   }
-
-  
 }
 
+.full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+
+  p {
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+  }
+}
